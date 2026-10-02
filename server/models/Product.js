@@ -41,6 +41,7 @@ const productSchema = new mongoose.Schema(
   }
 );
 
+// Compound index for text search and index for category filtering
 productSchema.index({ name: 'text', description: 'text' });
 productSchema.index({ category: 1 });
 
